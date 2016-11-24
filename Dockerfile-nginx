@@ -1,0 +1,9 @@
+FROM nginx:latest
+
+EXPOSE 20222
+RUN mkdir /app
+WORKDIR /app
+ENV NODE_ENV development
+ENV APPLICATION_ENV development
+
+COPY . /app

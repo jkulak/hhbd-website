@@ -1,0 +1,6 @@
+*.ini
+.DS_Store
+.htaccess
+_dev/
+compose-development.yml
+compose-production.yml

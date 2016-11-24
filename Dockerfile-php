@@ -1,0 +1,12 @@
+FROM phpdockerio/php7-fpm:latest
+
+# Install selected extensions and other stuff
+RUN apt-get update \
+    && apt-get -y --no-install-recommends install php7.0-memcache php7.0-mysql \
+    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+
+ENV NODE_ENV development
+ENV APPLICATION_ENV development
+
+RUN mkdir /var/log/hhbd-website
+RUN chown www-data:www-data /var/log/hhbd-website
