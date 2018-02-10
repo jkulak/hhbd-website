@@ -20,7 +20,7 @@ resources.db.params.password = www
 resources.db.params.dbname = hhbd
 
 resources.frontController.controllerDirectory = APPLICATION_PATH "/controllers"
-resources.frontController.baseUrl = http://hhbd.pl.vmx/
+resources.frontController.baseUrl = /
 resources.layout.layoutpath = APPLICATION_PATH "/layouts"
 
 app.showAds = 1
@@ -58,7 +58,7 @@ resources.mail.transport.ssl = ssl
 resources.mail.transport.username = www
 resources.mail.transport.password = www
 resources.mail.defaultFrom.email = vmx@hhbd.pl
-resources.mail.defaultFrom.name = Hhbd vmx
+resources.mail.defaultFrom.name = Hhbd Website
 
 ; ***********
 ; * LOGGERS
@@ -73,13 +73,13 @@ resources.log.mail-emergency.filterName = "Priority"
 resources.log.mail-emergency.filterParams.priority = 0
 
 resources.log.stream-emergency.writerName = "Stream"
-resources.log.stream-emergency.writerParams.stream = "/var/log/hhbd.pl.vmx/emergency-hhbd.log"
+resources.log.stream-emergency.writerParams.stream = "/var/log/hhbd-website/emergency-hhbd.log"
 resources.log.stream-emergency.writerParams.mode = "a"
 resources.log.stream-emergency.filterName = "Priority"
 resources.log.stream-emergency.filterParams.priority = 0
 
 resources.log.stream-debug.writerName = "Stream"
-resources.log.stream-debug.writerParams.stream = "/var/log/hhbd.pl.vmx/debug-hhbd.log"
+resources.log.stream-debug.writerParams.stream = "/var/log/hhbd-website/debug-hhbd.log"
 resources.log.stream-debug.writerParams.mode = "a"
 resources.log.stream-debug.filterName = "Priority"
 resources.log.stream-debug.filterParams.priority = 7
