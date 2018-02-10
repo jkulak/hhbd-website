@@ -1,7 +1,7 @@
 <?php
 
 /**
-* 
+*
 */
 class Jkl_Model_Exception extends Jkl_Exception
 {
