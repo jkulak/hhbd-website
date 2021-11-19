@@ -20,12 +20,3 @@ services:
             - ./conf/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
         environment:
             - APPLICATION_ENV=development
-    mysql:
-        image: mysql:5.7
-        ports:
-            - 3306:3306
-        environment:
-            - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_DATABASE=hhbd
-            - MYSQL_USER=www
-            - MYSQL_PASSWORD=www
