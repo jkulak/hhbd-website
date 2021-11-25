@@ -31,7 +31,7 @@ class Jkl_Db extends Jkl_Cache
   }
   
   /*
-  * FechtAll with memcached support
+  * FechtAll
   */
   public function fetchAll($query, $lifeTime = null)
   {
