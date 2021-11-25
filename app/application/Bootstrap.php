@@ -1,5 +1,7 @@
 <?php
 
+use Google\Cloud\Logging\LoggingClient;
+
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
    
@@ -15,7 +17,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
   
   protected function _initApplication()
   {
-    Zend_Registry::set('Logger', $this->bootstrap('log')->getResource('log'));
+
+    $logging = new LoggingClient(['projectId' => 'hhbd-pl']);
+
+    Zend_Registry::set('Logger', $logging->psrLogger('app'));
     
     // Load configuration from file, put it in the registry
     $appConfig = $this->getOption('app');
@@ -27,7 +32,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     
     // Read Resources section and put it in registry
     $resourcesConfig = $this->getOption('resources');
-    Zend_Registry::set('Memcached', Jkl_Cache::getInstance());
+    // Zend_Registry::set('Memcached', Jkl_Cache::getInstance());
 
     // Start routing
     $frontController = Zend_Controller_Front::getInstance();

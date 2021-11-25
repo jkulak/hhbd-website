@@ -10,7 +10,7 @@ class Jkl_Cache
 
   function __construct()
   {
-    $this->_cache = $this->_initMemcached();
+    // $this->_cache = $this->_initMemcached();
   }
 
   /**

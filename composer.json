@@ -1,0 +1,13 @@
+{
+    "require": {
+        "google/cloud-logging": "^1.22"
+    },
+    "config": {
+        "platform": {
+            "php": "5.5"
+        }
+    },
+    "autoload": {
+
+    }
+}

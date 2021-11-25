@@ -42,16 +42,8 @@ class Jkl_Db extends Jkl_Cache
     
     $this->_queryCount++;
 
-    $cache = $this->_cache->load(md5($query));
-    
-    if (false === $cache) {
-      $result = $this->_db->fetchAll($query);      
-      $test = $this->_cache->save($result, md5($query), array(), $lifeTime);
-      // Zend_Registry::get('Logger')->info('DB::read ' . (string)str_replace(array("\r", "\r\n", "\n"), '', $query));
-    }
-    else {
-      $result = $cache;
-    }
+    $result = $this->_db->fetchAll($query);   
+
     return $result;
   }
   

@@ -19,12 +19,16 @@ defined('EXTERNAL_ZEND_PATH')
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
     realpath(APPLICATION_PATH . '/../library'),
+    realpath(APPLICATION_PATH . '/../../vendor'),
     realpath(EXTERNAL_ZEND_PATH),
     get_include_path(),
 )));
 
 /** Zend_Application */
 require_once 'Zend/Application.php';
+
+// Composer autoload 
+require '../../vendor/autoload.php';
 
 // Create application, bootstrap, and run
 $application = new Zend_Application(

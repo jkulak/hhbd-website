@@ -5,3 +5,4 @@ _dev/
 compose-development.yml
 compose-production.yml
 _NOTES.md
+vendor/
