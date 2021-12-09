@@ -42,7 +42,7 @@ class ErrorController extends Zend_Controller_Action
                   }
 
                   // Log only when it's something different from 404
-                  $this->getLog()->emerg($this->getRequest()->getRequestUri() . '|' . $errors->exception->getCode() . '|' . $errors->exception->getMessage());
+                  // $this->getLog()->write($this->getRequest()->getRequestUri() . '|' . $errors->exception->getCode() . '|' . $errors->exception->getMessage());
 
                 break;
             default:
