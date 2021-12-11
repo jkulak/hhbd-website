@@ -1,4 +1,4 @@
-runtime: php74
+runtime: php72
 
 # Defaults to "serve index.php" and "serve public/index.php". Can be used to
 # serve a custom PHP front controller (e.g. "serve backend/index.php") or to
@@ -8,10 +8,11 @@ entrypoint: serve app/public/index.php
 
 
 handlers:
-# # Serve a directory as a static resource.
-# - url: /stylesheets
-#   static_dir: stylesheets
-
+# Serve a directory as a static resource.
+- url: /css
+  static_dir: app/public/css
+- url: /s
+  static_dir: app/public/s
 
 # # Serve images as static resources.
 # - url: /(.+\.(gif|png|jpg))$
@@ -21,3 +22,6 @@ handlers:
 # Serve your app through a front controller at index.php or public/index.php.
 - url: .*
   script: auto
+
+vpc_access_connector:
+  name: projects/hhbd-pl/locations/europe-central2/connectors/hhbd-conn
