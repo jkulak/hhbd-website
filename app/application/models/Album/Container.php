@@ -70,9 +70,9 @@ class Model_Album_Container
       $this->thumbnail = $configApp['paths']['albumThumbnailPath'] . substr($params['cover'], 0, -4) . $configApp['paths']['albumThumbnailSuffix'];
     }
     else
-    {
-      $this->cover = $configApp['paths']['albumCoverPath'] . 'cd.png';
-      $this->thumbnail = $configApp['paths']['albumThumbnailPath'] . 'cd.png';
+      {
+      $this->cover = $configApp['paths']['albumCoverPath'] . 'nocover.gif';
+      $this->thumbnail = $configApp['paths']['albumThumbnailPath'] . 'nocover_75.jpg';
     }
     
     if (!empty($params['rating'])) {
