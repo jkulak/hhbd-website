@@ -43,7 +43,7 @@ class Model_Image_Api extends Jkl_Model_Api
         $pictures->add(new Model_Image_Container($value));
       }
     } else {
-      $params['url'] = $this->_appConfig['paths']['artistPhotoPath'] . 'no.png';
+      $params['url'] = $this->_appConfig['paths']['artistPhotoPath'] . 'nohs.gif';
       $pictures->add(new Model_Image_Container($params));
     }
     return $pictures;
@@ -60,7 +60,7 @@ class Model_Image_Api extends Jkl_Model_Api
         $pictures->add(new Model_Image_Container($value));
       }
     } else {
-      $params['url'] = $this->_appConfig['paths']['artistPhotoPath'] . 'no.png';
+      $params['url'] = $this->_appConfig['paths']['artistPhotoPath'] . 'nohs.gif';
       $pictures->add(new Model_Image_Container($params));
     }
     return $pictures;

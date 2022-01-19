@@ -206,45 +206,45 @@
           </defaults>
         </stat>
 
-        <!-- ************* -->
+        *************
         <!-- * USER PART * -->
         <!-- ************* -->
         
         <!-- User registration -->
-        <userRegistration>
+        <!-- <userRegistration>
           <route>użytkownik/rejestracja.html</route>
           <defaults>
             <controller>user</controller>
             <action>registration</action>
           </defaults>
-        </userRegistration>
+        </userRegistration> -->
         
         <!-- User login -->
-        <userLogin>
+        <!-- <userLogin>
           <route>użytkownik/logowanie.html</route>
           <defaults>
             <controller>user</controller>
             <action>login</action>
           </defaults>
-        </userLogin>
+        </userLogin> -->
         
         <!-- User logout -->
-        <userLogout>
+        <!-- <userLogout>
           <route>user/logout</route>
           <defaults>
             <controller>user</controller>
             <action>logout</action>
           </defaults>
-        </userLogout>
+        </userLogout> -->
         
         <!-- User not logged in -->
-        <userNotLoggedIn>
+        <!-- <userNotLoggedIn>
           <route>użytkownik/niezalogowany.html</route>
           <defaults>
             <controller>user</controller>
             <action>not-logged-in</action>
           </defaults>
-        </userNotLoggedIn>
+        </userNotLoggedIn> -->
         
         <user type="Zend_Controller_Router_Route_Regex">
           <route>użytkownik/(.+),(\d+).html</route>
